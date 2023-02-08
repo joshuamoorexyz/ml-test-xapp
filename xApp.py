@@ -1,6 +1,11 @@
 from os import getenv # Give access to get environmental variables
 
-from ricxappframe.xapp_frame import * # Get access to the RIC xApp framework
+from ricxappframe_oaict.xapp_frame import * # Get access to the RIC xApp framework
+
+from handler import * # Imports the handlers
+from manager import * # Imports the managers
+
+from utils.constants import Constants
 
 
 class Oaict_xApp:
@@ -21,8 +26,18 @@ class Oaict_xApp:
     def config_handler(self, rmr_xapp, config):
         print("Handle config change")
 
-    def _post_init(self):
-        print("Post init")
+    def _post_init(self, rmr_xapp):
+        """
+        Function that runs when xapp initialization is complete
+        """
+
+    def createHandlers(self):
+        """
+        Function that creates all the handlers for RMR Messages
+        """
+        HealthCheckHandler(self._rmr_xapp, Constants.RIC_HEALTH_CHECK_REQ)
+        A1PolicyHandler(self._rmr_xapp, Constants.A1_POLICY_REQ)
+        SubscriptionHandler(self._rmr_xapp,Constants.SUBSCRIPTION_REQ)
 
     def start(self):
-        print("Start")
+        self.createHandlers()
