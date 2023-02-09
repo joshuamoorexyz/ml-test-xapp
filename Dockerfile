@@ -43,4 +43,4 @@ ENV DBAAS_SERVICE_PORT=6379
 ENV DBAAS_SERVICE_HOST=service-ricplt-dbaas-tcp.ricplt.svc.cluster.local
 
 #Run
-CMD run-hw-python.py
+CMD run-ml-python.py
