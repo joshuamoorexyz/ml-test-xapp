@@ -30,6 +30,13 @@ class Oaict_xApp:
         """
         Function that runs when xapp initialization is complete
         """
+        rmr_xapp.logger.info("HWXapp.post_init :: post_init called")
+        # self.sdl_alarm_mgr = SdlAlarmManager()
+        sdl_mgr = SdlManager(rmr_xapp)
+        # sdl_mgr.sdlGetGnbList()
+        a1_mgr = A1PolicyManager(rmr_xapp)
+        a1_mgr.startup()
+        sub_mgr = SubscriptionManager(rmr_xapp)
 
     def createHandlers(self):
         """
