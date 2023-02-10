@@ -33,7 +33,7 @@ setup(
     long_description=read('README.md'),
     author='Wen & Josh',
     author_email='nonya',
-    python_requires='>=3.10',
+    python_requires='>=3.8',
     install_requires=["ricxappframe>=1.1.1,<2.3.0"],
     entry_points={"console_scripts": ["run-ml-python.py=src.main:launchXapp"]},  # adds a magical entrypoint for Docker
     data_files=[("", ["LICENSE.txt"])],

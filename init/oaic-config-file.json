@@ -1,5 +1,6 @@
 {
-    "name": "oaic_xapp",
+    "json_url": "oaic_xapp",
+    "xapp_name": "oaic_xapp",
     "version": "0.0.1",
     "containers": [
         {
@@ -11,6 +12,7 @@
             }
         }
     ],
+    "appenv": { "ranList":"enB_macro_001_001_0019b0" },
     "messaging": {
         "ports": [
             {
@@ -52,9 +54,6 @@
             "A1_POLICY_REQ", "RIC_HEALTH_CHECK_REQ"
         ],
     "policies": [1]
-    },
-    "controls": {
-            "fileStrorage": false
     },
     "db" : {
             "waitForSdl": false
