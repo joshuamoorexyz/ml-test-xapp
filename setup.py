@@ -24,7 +24,7 @@ def read(fname):
 
 
 setup(
-    name='oaic_xapp',
+    name='oaic-xapp',
     version='0.0.1',
     packages=find_packages(),
     url='https://github.com/joshuamoorexyz/ml-test-xapp',
@@ -35,7 +35,6 @@ setup(
     author_email='nonya',
     python_requires='>=3.8',
     install_requires=["ricxappframe>=1.1.1,<2.3.0"],
-    entry_points={"console_scripts": ["run-ml-python.py=src.main:launchXapp"]},  # adds a magical entrypoint for Docker
+    entry_points={"console_scripts": ["run-ml-python.py=.src.main:launchxApp"]},  # adds a magical entrypoint for Docker
     data_files=[("", ["LICENSE.txt"])],
 )
-

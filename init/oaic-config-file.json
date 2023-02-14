@@ -1,13 +1,13 @@
 {
-    "json_url": "oaic_xapp",
-    "xapp_name": "oaic_xapp",
+    "json_url": "oaic-xapp",
+    "xapp_name": "oaic-xapp",
     "version": "0.0.1",
     "containers": [
         {
-            "name": "oaic_xapp",
+            "name": "oaic-xapp",
             "image": {
                 "registry": "xApp-registry.local:5008",
-                "name": "oaic_xapp",
+                "name": "oaic-xapp",
                 "tag": "0.0.1"
             }
         }
@@ -17,19 +17,19 @@
         "ports": [
             {
                 "name": "http",
-                "container": "oaic_xapp",
+                "container": "oaic-xapp",
                 "port": 8080,
                 "description": "http service"
             },
             {
                 "name": "rmrroute",
-                "container": "oaic_xapp",
+                "container": "oaic-xapp",
                 "port": 4561,
                 "description": "rmr route port for oaic xapp"
             },
             {
                 "name": "rmrdata",
-                "container": "oaic_xapp",
+                "container": "oaic-xapp",
                 "port": 4560,
                 "rxMessages": ["RIC_SUB_RESP", "RIC_SUB_FAILURE", "RIC_SUB_DEL_RESP", "RIC_INDICATION"],
                 "txMessages": ["RIC_SUB_REQ", "RIC_SUB_DEL_REQ", "RIC_SGNB_ADDITION_REQ", "RIC_SGNB_ADDITION_ACK"],
