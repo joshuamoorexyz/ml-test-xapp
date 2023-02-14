@@ -35,6 +35,6 @@ setup(
     author_email='nonya',
     python_requires='>=3.8',
     install_requires=["ricxappframe>=1.1.1,<2.3.0"],
-    entry_points={"console_scripts": ["run-ml-python.py=.src.main:launchxApp"]},  # adds a magical entrypoint for Docker
+    entry_points={"console_scripts": ["run-ml-python.py=src.main:launchxApp"]},  # adds a magical entrypoint for Docker
     data_files=[("", ["LICENSE.txt"])],
 )
